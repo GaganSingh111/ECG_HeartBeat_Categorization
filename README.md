@@ -48,14 +48,6 @@ Before applying SMOTE, the models struggled with imbalanced data. After applying
 - **SMOTE helped balance the dataset**, improving classification for less common heartbeat types.
 - Future work could explore hybrid models and real-time applications on wearable devices.
 
-## How to Run the Project
-### Prerequisites
-- Python 3.11+
-- TensorFlow & Keras
-- NumPy, Pandas, Matplotlib, Seaborn
-- Scikit-learn, Imbalanced-learn
-
-
 ## License
 This project is licensed under the MIT License. See `LICENSE` for details.
 
