@@ -1,10 +1,10 @@
 # ECG Heartbeat Categorization Using Deep Learning Models
 
-## Project Overview
-This is a student project aimed at classifying ECG signals to detect heart conditions. The project uses deep learning models like LSTM, CNN, and GRU to categorize heartbeats into five types using the MIT-BIH Arrhythmia Dataset. The goal is to create an efficient and accurate system for diagnosing arrhythmias.
+## Overview
+This project focuses on classifying ECG signals to help detect heart conditions. It uses deep learning models like LSTM, CNN, and GRU to categorize heartbeats into five types based on the MIT-BIH Arrhythmia Dataset. The aim is to build an accurate system for detecting arrhythmias automatically.
 
 ## Dataset
-We used the **MIT-BIH Arrhythmia Dataset**, a widely used dataset for ECG classification. The dataset includes:
+The project uses the **MIT-BIH Arrhythmia Dataset**, which is widely used for ECG signal classification. The dataset includes:
 - **Total Samples**: 109,446
 - **Categories**:
   - Normal (N)
@@ -17,25 +17,25 @@ We used the **MIT-BIH Arrhythmia Dataset**, a widely used dataset for ECG classi
 - **Dataset Link**: [Kaggle](https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
 
 ## Methodology
-1. **Preprocessing**
-   - Splitting raw ECG signals into 187 data points per heartbeat.
-   - Normalization for better training.
-   - One-hot encoding for class labels.
-   - Using **SMOTE** to balance the dataset.
+### Preprocessing
+- ECG signals are split into individual heartbeats (each 187 data points long).
+- The data is normalized to improve training.
+- Labels are one-hot encoded for better classification.
+- **SMOTE** is applied to handle class imbalance.
 
-2. **Feature Extraction & Model Training**
-   - **CNN**: Extracts important patterns from ECG signals.
-   - **LSTM**: Captures patterns in sequential data.
-   - **GRU**: Faster and more memory-efficient than LSTM.
+### Model Training
+- **CNN**: Detects important patterns in ECG signals.
+- **LSTM**: Captures sequential relationships in the data.
+- **GRU**: A faster alternative to LSTM with similar accuracy.
 
-3. **Training & Evaluation**
-   - **Optimizer**: Adam
-   - **Loss Function**: Categorical Cross-Entropy
-   - **Epochs**: 50 (with early stopping)
-   - **Metrics**: Accuracy, Precision, Recall, F1-score
+### Training & Evaluation
+- **Optimizer**: Adam
+- **Loss Function**: Categorical Cross-Entropy
+- **Epochs**: 50 (with early stopping)
+- **Metrics**: Accuracy, Precision, Recall, F1-score
 
 ## Results
-At first, the models struggled with imbalanced data. After applying SMOTE, accuracy improved:
+Before applying SMOTE, the models struggled with imbalanced data. After applying SMOTE, accuracy improved:
 
 | Model | Accuracy | F1 Score | Precision | Recall |
 |-------|----------|----------|-----------|--------|
@@ -45,6 +45,18 @@ At first, the models struggled with imbalanced data. After applying SMOTE, accur
 
 ## Conclusion
 - **CNN performed the best**, achieving the highest accuracy.
-- **SMOTE improved classification for less common heartbeat types.**
-- Future improvements could involve using hybrid models and testing real-time applications on wearable devices.
+- **SMOTE helped balance the dataset**, improving classification for less common heartbeat types.
+- Future work could explore hybrid models and real-time applications on wearable devices.
+
+## How to Run the Project
+### Prerequisites
+- Python 3.11+
+- TensorFlow & Keras
+- NumPy, Pandas, Matplotlib, Seaborn
+- Scikit-learn, Imbalanced-learn
+
+
+## License
+This project is licensed under the MIT License. See `LICENSE` for details.
+
 
